@@ -16,26 +16,22 @@ export default function Header() {
           <span className="font-bold tracking-tight text-base">GUSTAVO <span className="text-slate-500">PEREIRA</span></span>
         </div>
 
-        {/* Links Centrais (Opcional, mas dá estrutura) */}
-        <div className="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
-          {["Sobre", "Projetos", "Stack", "Contato"].map((item) => (
-            <a key={item} href={`#${item.toLowerCase()}`} className="hover:text-foreground transition-colors">
-              {item}
-            </a>
-          ))}
+        {/* Links Centrais */}
+        <div className="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#about" className="text-muted-foreground hover:text-foreground transition-colors">Sobre</a>
+          <a href="#projects" className="text-muted-foreground hover:text-foreground transition-colors">Projetos</a>
+          <a href="#stack" className="text-muted-foreground hover:text-foreground transition-colors">Stack</a>
+          <a href="#contact" className="text-muted-foreground hover:text-foreground transition-colors">Contato</a>
         </div>
 
         {/* Ações/Redes */}
-        <div className="flex items-center gap-3">
-          <a href="#" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
-            <Linkedin className="w-4 h-4" />
-          </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full hover:bg-muted transition-colors text-muted-foreground hover:text-foreground">
+        <div className="flex items-center gap-2">
+          <a href="https://github.com/Pereira-gu" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors text-muted-foreground hover:text-foreground">
             <Github className="w-4 h-4" />
           </a>
-          <Button size="sm" className="rounded-full h-9 px-5 text-xs font-semibold" asChild>
-            <a href="/curriculo.pdf" target="_blank">Download CV</a>
-          </Button>
+          <a href="https://linkedin.com/in/gustavospereira-dev" target="_blank" rel="noopener noreferrer" className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-zinc-800 transition-colors text-muted-foreground hover:text-foreground">
+            <Linkedin className="w-4 h-4" />
+          </a>
         </div>
       </nav>
     </header>

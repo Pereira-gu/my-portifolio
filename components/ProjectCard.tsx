@@ -27,54 +27,68 @@ export function ProjectCard({ title, description, stack, image_urls, github_url,
   const plugin = React.useRef(Autoplay({ delay: 3500, stopOnInteraction: false }));
 
   return (
-    <Card className="flex h-full flex-col overflow-hidden border bg-white shadow-none transition-all hover:border-slate-400 hover:-translate-y-1 dark:bg-zinc-950 dark:border-zinc-800 dark:hover:border-zinc-700">
-      {/* Carrossel de Imagens Interno */}
-      <Carousel plugins={[plugin.current]} className="w-full" opts={{ loop: true }}>
-        <CarouselContent>
-          {image_urls.map((url, index) => (
-            <CarouselItem key={index}>
-              <AspectRatio ratio={16 / 9} className="overflow-hidden bg-slate-100 dark:bg-zinc-900">
-                <Image 
-                  src={url} 
-                  alt={title}
-                  fill
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </AspectRatio>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+    <Card className="flex h-full flex-col overflow-hidden border bg-white dark:bg-zinc-950 hover:shadow-lg dark:hover:shadow-lg/20 transition-all duration-300 hover:border-slate-300 dark:hover:border-zinc-700 dark:border-zinc-800">
+      {/* Carrossel de Imagens */}
+      <div className="overflow-hidden bg-slate-100 dark:bg-zinc-900">
+        <Carousel plugins={[plugin.current]} className="w-full" opts={{ loop: true }}>
+          <CarouselContent>
+            {image_urls.map((url, index) => (
+              <CarouselItem key={index}>
+                <AspectRatio ratio={16 / 9}>
+                  <Image 
+                    src={url} 
+                    alt={`${title} - imagem ${index + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                </AspectRatio>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
 
-      {/* Conteúdo do Card Refinado (Tamanhos compactos) */}
-      <CardHeader className="p-4 pb-1 space-y-2">
-        <div className="flex flex-wrap gap-1">
+      {/* Conteúdo do Card */}
+      <CardHeader className="p-5 pb-3 space-y-3 flex-1">
+        {/* Stack de Tecnologias */}
+        <div className="flex flex-wrap gap-1.5 items-center">
           {stack.slice(0, 3).map((tech) => (
-            <Badge key={tech} variant="secondary" className="rounded-sm bg-slate-100 text-[8px] font-bold uppercase tracking-wider text-slate-500 dark:bg-zinc-800 dark:text-zinc-400 px-1.5 py-0">
+            <Badge key={tech} variant="secondary" className="text-[11px] font-semibold px-2.5 py-0.5">
               {tech}
             </Badge>
           ))}
+          {stack.length > 3 && (
+            <Badge variant="outline" className="text-[11px] font-semibold px-2.5 py-0.5 text-slate-600 dark:text-slate-400">
+              +{stack.length - 3}
+            </Badge>
+          )}
         </div>
-        <CardTitle className="text-sm font-bold leading-tight line-clamp-1 text-slate-900 dark:text-zinc-100">{title}</CardTitle>
+        
+        {/* Título */}
+        <CardTitle className="text-lg font-bold leading-tight line-clamp-2 text-slate-900 dark:text-zinc-100">
+          {title}
+        </CardTitle>
       </CardHeader>
 
-      <CardContent className="px-4 pb-4">
-        <p className="text-[11px] leading-relaxed text-muted-foreground line-clamp-2 italic">
+      {/* Descrição */}
+      <CardContent className="px-5 pb-4 flex-1">
+        <p className="text-sm leading-relaxed text-muted-foreground line-clamp-3">
           {description}
         </p>
       </CardContent>
 
-      <CardFooter className="mt-auto flex gap-2 border-t border-slate-100 p-3 dark:border-zinc-800/50">
-        <Button variant="outline" size="sm" className="h-7 w-full text-[9px] font-bold uppercase tracking-widest px-0" asChild>
+      {/* Botões de Ação */}
+      <CardFooter className="flex gap-2 border-t border-slate-100 p-4 dark:border-zinc-800/50 bg-slate-50/50 dark:bg-zinc-900/30">
+        <Button variant="outline" size="sm" className="flex-1 h-9 text-xs font-semibold" asChild>
           <a href={github_url} target="_blank" rel="noopener noreferrer">
-            <Github className="mr-1.5 h-3 w-3" /> Código
+            <Github className="mr-1.5 h-3.5 w-3.5" /> Ver Código
           </a>
         </Button>
         {live_url && (
-          <Button size="sm" className="h-7 w-full text-[9px] font-bold uppercase tracking-widest px-0" asChild>
+          <Button size="sm" className="flex-1 h-9 text-xs font-semibold" asChild>
             <a href={live_url} target="_blank" rel="noopener noreferrer">
-              <ExternalLink className="mr-1.5 h-3 w-3" /> Demo
+              <ExternalLink className="mr-1.5 h-3.5 w-3.5" /> Demo
             </a>
           </Button>
         )}
