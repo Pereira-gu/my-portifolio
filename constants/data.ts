@@ -8,10 +8,15 @@ export const USER_DATA = {
     linkedin: "https://linkedin.com/in/gustavospereira-dev",
   },
   stack: {
-    platforms: ["AWS", "Linux",],
-    languages: ["Python", "JavaScript", "PHP", "Java"],
-    learning: ["AWS Practioner Essencial", "Java To Mobile", "Graphs"]
-  },
+  // O que você realmente "pilota" no dia a dia
+  corestack: ["Python", "PHP", "C Language", "TypeScript"], 
+  
+  // O que prova que você é um estudante de CC sério
+  learning: ["AWS Cloud Practitioner", "Algoritmos em Grafos", "Kubernetes (K8s)"],
+  
+  // Ferramentas que agregam valor ao projeto
+  tools: ["Git & GitHub", "MySQL / SQLite", "Docker", "Power BI"]
+},
   projectSections: [
     {
       categoria: "Data Science & Analytics",
