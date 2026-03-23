@@ -2,7 +2,7 @@
 export const USER_DATA = {
   name: "Gustavo Pereira",
   role: "Developer & Cloud Specialist",
-  description: "Estudante de Ciência da Computação especializado em Cloud Computing, Automação e Performance. Desenvolvimento de soluções escaláveis com Python, AWS e infraestrutura moderna.",
+  description: "Estudante de Ciência da Computação focado em Cloud Computing, Automação e Performance. Desenvolvimento de soluções escaláveis com Python, AWS e infraestrutura moderna.",
   links: {
     github: "https://github.com/Pereira-gu",
     linkedin: "https://linkedin.com/in/gustavospereira-dev",
