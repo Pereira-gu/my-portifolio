@@ -8,14 +8,17 @@ export const USER_DATA = {
     linkedin: "https://linkedin.com/in/gustavospereira-dev",
   },
   stack: {
-  // O que você realmente "pilota" no dia a dia
-  corestack: ["Python", "PHP", "C Language", "TypeScript"], 
-  
-  // O que prova que você é um estudante de CC sério
-  learning: ["AWS Cloud Practitioner", "Algoritmos em Grafos", "Kubernetes (K8s)"],
-  
-  // Ferramentas que agregam valor ao projeto
-  tools: ["Git & GitHub", "MySQL / SQLite", "Docker", "Power BI"]
+    // O seu "core" de desenvolvimento e lógica
+      corestack: ["Java (Spring Boot)", "Python", "C Language", "TypeScript"], 
+      
+      // Tecnologias de infraestrutura que aplicou no projeto de alunos
+      infrastructure: ["AWS", "Docker & Compose", "Linux Terminal"],
+      
+      // Persistência e análise
+      data: ["MySQL", "PostgreSQL", "SQLite", "Power BI"],
+      
+      // O que está a aprofundar agora
+      learning: ["AWS Cloud Practitioner", "Kubernetes (K8s)", "Estruturas de Dados Avançadas"]
 },
   projectSections: [
     {

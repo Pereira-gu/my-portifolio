@@ -13,7 +13,8 @@ export function SkillsSidebar() {
         
         <div className="space-y-6">
           <SkillGroup title="Stack Principal" items={USER_DATA.stack.corestack} color="bg-green-500" />
-          <SkillGroup title="Ferramentas" items={USER_DATA.stack.tools} color="bg-green-500" />
+          <SkillGroup title="Infraestrutura" items={USER_DATA.stack.infrastructure} color="bg-purple-500" />
+          <SkillGroup title="Persistência e Análise" items={USER_DATA.stack.data} color="bg-yellow-500" />
           <SkillGroup title="Aprendendo" items={USER_DATA.stack.learning} color="bg-blue-500" animate />
         </div>
 
