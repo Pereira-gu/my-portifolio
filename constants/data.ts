@@ -38,6 +38,18 @@ export const USER_DATA = {
       ]
     },
     {
+      categoria: "Sistema Backend & Infraestrutura",
+      projetos: [
+        {
+          title: "Student Registration API",
+          description: "API REST resiliente para gestão de matrículas, com foco em arquitetura limpa, tratamento global de exceções e conteinerização. Desenvolvida para ser 'Cloud-Ready', garantindo consistência entre ambientes de desenvolvimento e produção.",
+          stack: ["Java 21", "Spring Boot 3", "MySQL", "Docker", "OpenAPI/Swagger"],
+          image_urls: ["/api_student/swaggerui.png", "/api_student/docker.png", "/api_student/400%20error.png"],
+          github_url: "https://github.com/Pereira-gu/api-student",
+        },
+      ]
+    },
+    {
       categoria: "Desenvolvimento Web & Software",
       projetos: [
         {
