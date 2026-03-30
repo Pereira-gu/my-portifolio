@@ -1,25 +1,25 @@
 // constants/data.ts
 export const USER_DATA = {
   name: "Gustavo Pereira",
-  role: "Developer & Cloud Specialist",
-  description: "Estudante de Ciência da Computação focado em Cloud Computing, Automação e Performance. Desenvolvimento de soluções escaláveis com Python, AWS e infraestrutura moderna.",
+  role: "Software Engineer | Backend & Cloud Specialist",
+  description: "Desenvolvedor focado em construir sistemas seguros, escaláveis e prontos para a nuvem. Especialista em Java (Spring Boot) e infraestrutura moderna com Docker e AWS.",
   links: {
     github: "https://github.com/Pereira-gu",
     linkedin: "https://linkedin.com/in/gustavospereira-dev",
   },
   stack: {
-    // O seu "core" de desenvolvimento e lógica
-      corestack: ["Java (Spring Boot)", "Python", "C Language", "TypeScript"], 
+      // Destaque para o Spring Boot que agora é seu ponto forte
+      corestack: ["Java (Spring Boot 3)", "Python", "TypeScript (Next.js)", "C Language"], 
       
-      // Tecnologias de infraestrutura que aplicou no projeto de alunos
-      infrastructure: ["AWS", "Docker & Compose", "Linux Terminal"],
+      // Refletindo o que você usou no Library Management
+      infrastructure: ["Docker & Compose", "AWS (Cloud Practitioner)", "Linux Terminal", "CI/CD (GitHub Actions)"],
       
-      // Persistência e análise
-      data: ["MySQL", "PostgreSQL", "SQLite", "Power BI"],
+      // Dados e Persistência
+      data: ["MySQL", "PostgreSQL", "SQLite", "Hibernate (JPA)"],
       
-      // O que está a aprofundar agora
-      learning: ["AWS Cloud Practitioner", "Kubernetes (K8s)", "Estruturas de Dados Avançadas"]
-},
+      // O seu próximo nível
+      learning: ["Kubernetes (K8s)", "Arquitetura Limpa", "Design Patterns"]
+  },
   projectSections: [
     {
       categoria: "Data Science & Analytics",
