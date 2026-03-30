@@ -50,6 +50,13 @@ export const USER_DATA = {
           image_urls: ["/api_student/swaggerui.png", "/api_student/docker.png", "/api_student/400%20error.png"],
           github_url: "https://github.com/Pereira-gu/api-student",
         },
+        {
+          title: "Library Management API",
+          description: "Ecossistema backend profissional para gestão de bibliotecas com foco em segurança stateless e regras de negócio complexas. Implementa fluxos de empréstimos com validações automáticas de limites de usuário, cálculos de multas por atraso e orquestração completa via containers.",
+          stack: ["Java 21", "Spring Security", "JWT", "Docker & Compose", "MySQL", "JUnit 5"],
+          image_urls: ["/api_library/excalidraw.png", "/api_library/swagger.png", "/api_library/test.png"],
+          github_url: "https://github.com/Pereira-gu/api-libary",
+        },
       ]
     },
     {
