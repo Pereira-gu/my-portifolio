@@ -8,16 +8,9 @@ export const USER_DATA = {
     linkedin: "https://linkedin.com/in/gustavospereira-dev",
   },
   stack: {
-      // Destaque para o Spring Boot que agora é seu ponto forte
-      corestack: ["Java (Spring Boot 3)", "Python", "TypeScript (Next.js)", "C Language"], 
-      
-      // Refletindo o que você usou no Library Management
+      corestack: ["Java (Spring Boot 3)", "Python", "TypeScript (React/Next.js)", "C Language"], 
       infrastructure: ["Docker & Compose", "AWS (Cloud Practitioner)", "Linux Terminal", "CI/CD (GitHub Actions)"],
-      
-      // Dados e Persistência
-      data: ["MySQL", "PostgreSQL", "SQLite", "Hibernate (JPA)"],
-      
-      // O seu próximo nível
+      data: ["PostgreSQL", "MySQL", "Hibernate (JPA)", "Flyway/Liquibase"],
       learning: ["Kubernetes (K8s)", "Arquitetura Limpa", "Design Patterns"]
   },
   projectSections: [
@@ -43,6 +36,13 @@ export const USER_DATA = {
     {
       categoria: "Sistema Backend & Infraestrutura",
       projetos: [
+        {
+          title: "MyFinn - Gestão Financeira Pessoal",
+          description: "Plataforma Full Stack de controle financeiro com foco em segurança JWT e arquitetura desacoplada. O backend gerencia transações complexas, categorização dinâmica e fornece dashboards via API RESTful, enquanto o ambiente é orquestrado via Docker para garantir escalabilidade e isolamento.",
+          stack: ["Java 17", "Spring Boot 3", "Spring Security", "PostgreSQL", "Docker", "React"],
+          image_urls: ["/myfinn/preview.png", "/myfinn/Render.png", "/myfinn/categorys.png", "/myfinn/transactions.png"],
+          github_url: "https://github.com/Pereira-gu/myfinn",
+        },
         {
           title: "Student Registration API",
           description: "API REST resiliente para gestão de matrículas, com foco em arquitetura limpa, tratamento global de exceções e conteinerização. Desenvolvida para ser 'Cloud-Ready', garantindo consistência entre ambientes de desenvolvimento e produção.",
