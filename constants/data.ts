@@ -1,76 +1,75 @@
-// constants/data.ts
-export const USER_DATA = {
-  name: "Gustavo Pereira",
-  role: "Software Engineer | Backend & Cloud Specialist",
-  description: "Desenvolvedor focado em construir sistemas seguros, escaláveis e prontos para a nuvem. Especialista em Java (Spring Boot) e infraestrutura moderna com Docker e AWS.",
-  links: {
-    github: "https://github.com/Pereira-gu",
-    linkedin: "https://linkedin.com/in/gustavospereira-dev",
-  },
-  stack: {
-      corestack: ["Java (Spring Boot 3)", "Python", "TypeScript (React/Next.js)", "C Language"], 
-      infrastructure: ["Docker & Compose", "AWS (Cloud Practitioner)", "Linux Terminal", "CI/CD (GitHub Actions)"],
-      data: ["PostgreSQL", "MySQL", "Hibernate (JPA)", "Flyway/Liquibase"],
-      learning: ["Kubernetes (K8s)", "Arquitetura Limpa", "Design Patterns"]
-  },
-  projectSections: [
-    {
-      categoria: "Data Science & Analytics",
-      projetos: [
-        {
-          title: "Guardian System",
-          description: "Monitorização de segurança modular para processos com scores de risco.",
-          stack: ["Python", "AWS", "SQLite", "psutil"],
-          image_urls: ["/guardian_system/dashboard.png", "/guardian_system/teerminal.png"],
-          github_url: "https://github.com/Pereira-gu/Guardian_System",
-        },
-        {
-          title: "E-Commerce Optimization",
-          description: "Solução de análise de dados de ponta a ponta utilizando o dataset da Olist.",
-          stack: ["Python", "Power BI", "SQLite", "pandas"],
-          image_urls: ["/e_commerce/dashboard.png"],
-          github_url: "https://github.com/Pereira-gu/E-Commerce-Optimization",
-        }
-      ]
-    },
-    {
-      categoria: "Sistema Backend & Infraestrutura",
-      projetos: [
-        {
-          title: "MyFinn - Gestão Financeira Pessoal",
-          description: "Plataforma Full Stack de controle financeiro com foco em segurança JWT e arquitetura desacoplada. O backend gerencia transações complexas, categorização dinâmica e fornece dashboards via API RESTful, enquanto o ambiente é orquestrado via Docker para garantir escalabilidade e isolamento.",
-          stack: ["Java 17", "Spring Boot 3", "Spring Security", "PostgreSQL", "Docker", "React"],
-          image_urls: ["/myfinn/preview.png", "/myfinn/Render.png", "/myfinn/categorys.png", "/myfinn/transactions.png"],
-          github_url: "https://github.com/Pereira-gu/myfinn",
-        },
-        {
-          title: "Student Registration API",
-          description: "API REST resiliente para gestão de matrículas, com foco em arquitetura limpa, tratamento global de exceções e conteinerização. Desenvolvida para ser 'Cloud-Ready', garantindo consistência entre ambientes de desenvolvimento e produção.",
-          stack: ["Java 21", "Spring Boot 3", "MySQL", "Docker", "OpenAPI/Swagger"],
-          image_urls: ["/api_student/swaggerui.png", "/api_student/docker.png", "/api_student/400%20error.png"],
-          github_url: "https://github.com/Pereira-gu/api-student",
-        },
-        {
-          title: "Library Management API",
-          description: "Ecossistema backend profissional para gestão de bibliotecas com foco em segurança stateless e regras de negócio complexas. Implementa fluxos de empréstimos com validações automáticas de limites de usuário, cálculos de multas por atraso e orquestração completa via containers.",
-          stack: ["Java 21", "Spring Security", "JWT", "Docker & Compose", "MySQL", "JUnit 5"],
-          image_urls: ["/api_library/excalidraw.png", "/api_library/swagger.png", "/api_library/test.png"],
-          github_url: "https://github.com/Pereira-gu/api-libary",
-        },
-      ]
-    },
-    {
-      categoria: "Desenvolvimento Web & Software",
-      projetos: [
-        {
-          title: "Saboroso Burger",
-          description: "Gestão Full Stack de pedidos e inventário com PHP e MySQL.",
-          stack: ["PHP", "MySQL", "JavaScript"],
-          image_urls: ["/saboroso_burger/mainpage.png"],
-          github_url: "https://github.com/Pereira-gu/projeto-hamburgueria",
-          live_url: "https://saborosobuger.com.br/index.php"
-        }
-      ]
-    }
-  ]
+export type Project = {
+  title: string;
+  description: string;
+  tags: string[];
+  links: { label: string; href: string }[];
 };
+
+const gh = "https://github.com/Pereira-gu";
+
+export const profile = {
+  name: "Gustavo Pereira",
+  role: "Construo APIs em Java e analiso dados com Python.",
+  intro:
+    "Estudante de Ciência da Computação na UNICID. Meus projetos cobrem autenticação, cache, processamento assíncrono e análise de dados. Todo o código está no GitHub.",
+  email: "dev.gustavospereira@gmail.com",
+  github: gh,
+  linkedin: "https://www.linkedin.com/in/guspereira-dev/",
+};
+
+export const projects: Project[] = [
+  {
+    title: "API Library",
+    description:
+      "API REST de biblioteca com autenticação JWT, perfis de administrador e usuário, empréstimos transacionais e documentação Swagger.",
+    tags: ["Java 21", "Spring Boot 3", "Spring Security", "MySQL", "Docker"],
+    links: [{ label: "Código", href: `${gh}/api-library` }],
+  },
+  {
+    title: "Ecommerce Analytics",
+    description:
+      "Análise exploratória de dados de e-commerce em Jupyter Notebook, com Python.",
+    tags: ["Python", "Jupyter Notebook"],
+    links: [{ label: "Código", href: `${gh}/ecommerce-analytics` }],
+  },
+  {
+    title: "Shortify & Track",
+    description:
+      "Encurtador de URLs que registra cliques em segundo plano e entrega métricas por navegador e dispositivo, com consultas agregadas no banco.",
+    tags: ["Java 21", "Spring Boot 3", "PostgreSQL", "JUnit", "Mockito"],
+    links: [{ label: "Código", href: `${gh}/URL_Shorter` }],
+  },
+  {
+    title: "Busca Inteligente",
+    description:
+      "Autocomplete que reduz consultas ao banco com debounce no frontend e cache-aside em Redis.",
+    tags: ["Java 21", "Spring Boot 3", "Redis"],
+    links: [{ label: "Código", href: `${gh}/busca-inteligente` }],
+  },
+  {
+    title: "MyFinn",
+    description:
+      "Gestor financeiro pessoal com gráficos, despesas recorrentes e parcelas de cartão. React no frontend e Spring Boot com JWT no backend.",
+    tags: ["React", "Spring Boot", "PostgreSQL", "JWT"],
+    links: [
+      { label: "Demonstração", href: "https://my-finn.vercel.app" },
+      { label: "Código", href: `${gh}/MyFinn` },
+    ],
+  },
+  {
+    title: "GA.EVENT",
+    description:
+      "Controle de presença em eventos com QR Code que expira em 5 minutos, cálculo de permanência e gamificação. API em Spring Boot e aplicativo Android.",
+    tags: ["Java 21", "Spring Boot", "PostgreSQL", "Android"],
+    links: [
+      { label: "API", href: `${gh}/ga-evento-api` },
+      { label: "Aplicativo", href: `${gh}/GA-evento-app` },
+    ],
+  },
+];
+
+export const stack = [
+  { group: "Backend", items: "Java 21, Spring Boot 3, Spring Security e JWT, JPA e Hibernate, JUnit e Mockito" },
+  { group: "Dados", items: "Python, Jupyter Notebook, SQL com PostgreSQL e MySQL" },
+  { group: "Infraestrutura", items: "Docker, Docker Compose, Redis, Git e GitHub. Em estudo: AWS e Kubernetes" },
+];
