@@ -1,31 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
 
-const geistSans = Geist({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gustavo Pereira | Portfólio",
-  description: "Computer Science Student & Cloud Specialist",
+  title: "Gustavo Pereira | Desenvolvedor Backend e Dados",
+  description:
+    "Portfólio de Gustavo Pereira: APIs em Java e Spring Boot, análise de dados com Python e projetos no GitHub.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR" className={cn("h-full selection:bg-primary/10", geistSans.variable, geistMono.variable)}>
-      <body className="font-sans min-h-full flex flex-col">
-        {children}
-      </body>
+    <html lang="pt-BR">
+      <body className={geistSans.variable}>{children}</body>
     </html>
   );
 }
